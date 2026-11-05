@@ -13,13 +13,17 @@ public class App {
         Scanner in = new Scanner(System.in);
         while (true) {
             System.out.println();
-            System.out.println("1) Add book  2) List books  0) Exit");
+            System.out.println("1) Add book  2) List books  3) Search  4) Remove  0) Exit");
             System.out.print("Choose: ");
             String choice = in.nextLine().trim();
             if (choice.equals("1")) {
                 addBook(in);
             } else if (choice.equals("2")) {
                 listBooks();
+            } else if (choice.equals("3")) {
+                searchBooks(in);
+            } else if (choice.equals("4")) {
+                removeBook(in);
             } else if (choice.equals("0")) {
                 System.out.println("Bye!");
                 break;
@@ -53,4 +57,34 @@ public class App {
             System.out.println((i + 1) + ". " + books.get(i));
         }
     }
+
+    static void searchBooks(Scanner in) {
+        System.out.print("Search title: ");
+        String query = in.nextLine().trim();
+        List<Book> books = store.load();
+        boolean found = false;
+        for (Book b : books) {
+            if (b.getTitle().toLowerCase().contains(query.toLowerCase())) {
+                System.out.println("- " + b);
+                found = true;
+            }
+        }
+        if (!found) {
+            System.out.println("No matching books.");
+        }
+    }
+
+    static void removeBook(Scanner in) {
+        System.out.print("Title to remove: ");
+        String title = in.nextLine().trim();
+        List<Book> books = store.load();
+        boolean removed = books.removeIf(b -> b.getTitle().equalsIgnoreCase(title));
+        if (removed) {
+            store.save(books);
+            System.out.println("Book removed.");
+        } else {
+            System.out.println("Book not found.");
+        }
+    }
+
 }
