@@ -64,7 +64,7 @@ public class App {
         List<Book> books = store.load();
         boolean found = false;
         for (Book b : books) {
-            if (b.getTitle().contains(query)) {
+            if (b.getTitle().toLowerCase().contains(query.toLowerCase())) {
                 System.out.println("- " + b);
                 found = true;
             }
