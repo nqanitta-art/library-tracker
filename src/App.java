@@ -69,4 +69,18 @@ public class App {
             System.out.println("No matching books.");
         }
     }
+
+    static void removeBook(Scanner in) {
+        System.out.print("Title to remove: ");
+        String title = in.nextLine().trim();
+        List<Book> books = store.load();
+        boolean removed = books.removeIf(b -> b.getTitle().equalsIgnoreCase(title));
+        if (removed) {
+            store.save(books);
+            System.out.println("Book removed.");
+        } else {
+            System.out.println("Book not found.");
+        }
+    }
+    
 }
