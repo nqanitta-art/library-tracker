@@ -28,12 +28,15 @@ public class App {
             }
         }
     }
-
     static void addBook(Scanner in) {
         System.out.print("Title: ");
         String title = in.nextLine().trim();
         System.out.print("Author: ");
         String author = in.nextLine().trim();
+        if (title.isEmpty() || author.isEmpty()) {
+            System.out.println("Title and author cannot be empty.");
+            return;
+        }
         List<Book> books = store.load();
         books.add(new Book(title, author));
         store.save(books);
