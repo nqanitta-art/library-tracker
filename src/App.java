@@ -53,4 +53,20 @@ public class App {
             System.out.println((i + 1) + ". " + books.get(i));
         }
     }
+
+    static void searchBooks(Scanner in) {
+        System.out.print("Search title: ");
+        String query = in.nextLine().trim();
+        List<Book> books = store.load();
+        boolean found = false;
+        for (Book b : books) {
+            if (b.getTitle().contains(query)) {
+                System.out.println("- " + b);
+                found = true;
+            }
+        }
+        if (!found) {
+            System.out.println("No matching books.");
+        }
+    }
 }
