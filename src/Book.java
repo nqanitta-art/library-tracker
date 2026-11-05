@@ -17,6 +17,6 @@ public class Book {
 
     @Override
     public String toString() {
-        return title + " by " + author;
+             return "\"" + title + "\" by " + author;
     }
 }
