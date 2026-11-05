@@ -85,4 +85,8 @@ public class App {
         }
     }
 
+    static void countBooks() {
+        int count = store.load().size();
+        System.out.println("Total books: " + count);
+    }
 }
