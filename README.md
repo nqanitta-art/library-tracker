@@ -1,12 +1,14 @@
 # Library Tracker
 
-This is a simple Java program that I developed to manage a collection of books. It allows me to add new books, display all books, search for a specific book, and remove books from the library. The book information is stored in a `books.json` file.
+A simple Java program to add, list, search, remove and count books saved in books.json.
 
 ## Team
+- Student A: Noor Qannita (GitHub: nqanitta-art)
+- Student B: Noor Qannita (GitHub: noorqanitta-ops)
 
-- **Student:** Noor Qannita
-- **GitHub:** [nqanitta-art](https://github.com/nqanitta-art)
+## Note
+Solo submission (working alone is allowed by the instructor).
+Both GitHub accounts belong to Noor Qannita and were used to practice the team workflow (issues, branches, pull requests and reviews).
 
-**Submission Type:** Solo Project
-
-I completed this project individually, as allowed by the instructor. Both GitHub accounts mentioned in the original team information belong to me.
+## How to run
+Open the project in IntelliJ and run App.main().
