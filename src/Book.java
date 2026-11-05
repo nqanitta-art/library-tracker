@@ -10,7 +10,7 @@ public class Book {
     public String getTitle() {
         return title;
     }
-
+    // Returns the author name
     public String getAuthor() {
         return author;
     }
