@@ -4,9 +4,8 @@ import java.util.Scanner;
 public class App {
     private static final BookStore store = new BookStore("books.json");
     static void printBanner() {
-        System.out.println("*** Welcome to Library Tracker ***");
+        System.out.println("*** Welcome to Library Tracker v1.0 ***");
     }
-
     public static void main(String[] args) {
         printBanner();
         Scanner in = new Scanner(System.in);
