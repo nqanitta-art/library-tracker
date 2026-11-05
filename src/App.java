@@ -50,7 +50,7 @@ public class App {
     static void listBooks() {
         List<Book> books = store.load();
         if (books.isEmpty()) {
-            System.out.println("No books yet.");
+            System.out.println("No books yet. Choose 1 to add one.");
             return;
         }
         for (int i = 0; i < books.size(); i++) {
