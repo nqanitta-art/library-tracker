@@ -3,9 +3,8 @@ import java.util.Scanner;
 
 public class App {
     private static final BookStore store = new BookStore("books.json");
-
     static void printBanner() {
-        System.out.println("=== Library Tracker ===");
+        System.out.println("*** Welcome to Library Tracker ***");
     }
 
     public static void main(String[] args) {
