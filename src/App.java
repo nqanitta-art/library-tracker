@@ -11,7 +11,7 @@ public class App {
         Scanner in = new Scanner(System.in);
         while (true) {
             System.out.println();
-            System.out.println("1) Add book  2) List books  3) Search  4) Remove  0) Exit");
+            System.out.println("1) Add book  2) List books  3) Search  4) Remove  5) Count  0) Exit");
             System.out.print("Choose: ");
             String choice = in.nextLine().trim();
             if (choice.equals("1")) {
@@ -22,6 +22,8 @@ public class App {
                 searchBooks(in);
             } else if (choice.equals("4")) {
                 removeBook(in);
+            } else if (choice.equals("5")) {
+                countBooks();
             } else if (choice.equals("0")) {
                 System.out.println("Bye!");
                 break;
